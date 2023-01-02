@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: ./prod/prod.Dockerfile
+
+  proxy:
+    build:
+      context: ..
+      dockerfile: ./prod/proxy.Dockerfile
+    ports: 
+      - 80:80 
+
